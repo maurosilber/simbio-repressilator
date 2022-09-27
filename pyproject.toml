@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "simbio-repressilator"
+description = "The repressilator model for SimBio."
+readme = "README.md"
+requires-python = ">=3.7"
+keywords = ["SimBio", "repressilator"]
+license = {text = "MIT License"}
+classifiers = [
+    "Framework :: SimBio",
+    "Programming Language :: Python :: 3",
+]
+dynamic = ["version", "dependencies"]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+[tool.setuptools.packages.find]
+where = ["src"]
